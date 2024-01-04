@@ -2,12 +2,18 @@
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
+## Tailwind
+**Input**
+```html
+<div class="text-red-400 font-bold">Text obarvený tailwindem</div>
+```
+**Output**
+<div class="text-red-400 font-bold">Text obarvený tailwindem</div>
+
+
 ## Syntax Highlighting
 
 VitePress provides Syntax Highlighting powered by [Shikiji](https://github.com/antfu/shikiji), with additional features like line-highlighting:
-
-**Tailwind**
-<div class="text-red-400 font-bold">Text obarvený tailwindem</div>
 
 **Input**
 
