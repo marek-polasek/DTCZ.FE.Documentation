@@ -18,5 +18,5 @@
 - více lidí nesmí zároveň dělat hotfix, další hotfix musí vycházet z minulého hotfixu.
 
 ## Když to posereš
-- dát rychle výpověd a už se nevracet
+- dát rychle výpověď a už se nevracet
 - jdeš pípat na kasu do lidlu
