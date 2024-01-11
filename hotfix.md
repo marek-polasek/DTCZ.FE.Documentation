@@ -18,7 +18,7 @@
 - mergnout větev *hotfix* do *master* i *dev*
 
 ## Postup předání opravy BE
-- do tásku pridat link na konkrétní zbuilděný hotfix https://dev.azure.com/DTCZ/Frontend/_build
+- do tásku přidat link na konkrétní zbuilděný hotfix https://dev.azure.com/DTCZ/Frontend/_build
 - předat tásk na PO, pokud není, tak na zadavatele tásku
 - přepnout do QA
 
