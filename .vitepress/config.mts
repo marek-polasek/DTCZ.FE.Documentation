@@ -1,10 +1,5 @@
 import {defineConfig} from 'vitepress'
 
-const npmTeeItems = [
-    {
-        text: "Vytvoření balíčku", link: "/NPMTEE/createPackage"
-    }
-]
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "My Awesome Project",
@@ -16,7 +11,13 @@ export default defineConfig({
             {text: 'Home', link: '/'},
             {text: 'Examples', link: '/markdown-examples'},
             {text: 'Hotfix', link: '/hotfix'},
-            {text: 'NPM Balíčky', items: npmTeeItems}
+            {text: 'NPMTEE Balíčky', items: [
+                    {
+                        text: "Vytvoření balíčku", link: "/npmtee/create/index",
+                    }, {
+                        text: "Abnb", link: "/npmtee/create/index"
+                    }
+                ]}
         ],
 
         sidebar: {
@@ -28,9 +29,19 @@ export default defineConfig({
                     {text: 'Hotfix', link: '/hotfix'}
                 ]
             },
-            "/NPMTEE/": {
+            "/npmtee/": {
                 text: "NPM Balíčky",
-                items: npmTeeItems
+                items: [{
+                    text: "Vytvoření balíčku",
+                    link: "/npmtee/create/index"
+                }, {
+                    text: "Abnb",
+                    link: "/npmtee/abnb/index",
+                    items: [{
+                        text: "Nadpis",
+                        link: "/npmtee/abnb/title"
+                    }]
+                }]
             }
         },
 
