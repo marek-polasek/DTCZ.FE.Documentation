@@ -15,7 +15,7 @@ export default defineConfig({
                     {
                         text: "Vytvoření balíčku", link: "/npmtee/create/index",
                     }, {
-                        text: "Abnb", link: "/npmtee/create/index"
+                        text: "Abnb", link: "/npmtee/abnb/index"
                     }
                 ]}
         ],
