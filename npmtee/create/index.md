@@ -1,3 +1,9 @@
+---
+next:
+  text: 'Abnb'
+  link: '/npmtee/abnb/index'
+---
+
 # Vytvoření NPM balíčku
 Nový NPMTEE balíček vytvoříme jednoduše pomocí "vytvářecího balíčku".
 
