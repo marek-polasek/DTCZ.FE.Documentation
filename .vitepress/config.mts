@@ -16,6 +16,8 @@ export default defineConfig({
                         text: "Vytvoření balíčku", link: "/npmtee/create/index",
                     }, {
                         text: "Abnb", link: "/npmtee/abnb/index"
+                    }, {
+                        text: "Modal-dialogs", link: "/npmtee/modal-dialogs/index"
                     }
                 ]}
         ],
@@ -41,6 +43,9 @@ export default defineConfig({
                         text: "AbnbTitle (nadpis)",
                         link: "/npmtee/abnb/title"
                     }]
+                }, {
+                    text: "Modal-dialogs",
+                    link: "/npmtee/modal-dialogs/index",
                 }]
             }
         },

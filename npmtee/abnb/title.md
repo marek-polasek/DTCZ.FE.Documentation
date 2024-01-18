@@ -1,3 +1,9 @@
+---
+next:
+  text: 'ModalDialog (modální okno)'
+  link: '/npmtee/modal-dialogs/index'
+---
+
 # AbnbTitle (nadpis)
 Komponenta pro nadpisy, která je součástí balíčku `@npm-tee/abnb`
 
