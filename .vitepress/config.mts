@@ -38,7 +38,7 @@ export default defineConfig({
                     text: "Abnb",
                     link: "/npmtee/abnb/index",
                     items: [{
-                        text: "Nadpis",
+                        text: "AbnbTitle (nadpis)",
                         link: "/npmtee/abnb/title"
                     }]
                 }]
