@@ -18,3 +18,11 @@ always-auth=true
 
 ## Spuštění
 Balíček ve složce spustíme příkazem `npx @npm-tee/creator` dále se řídíme pokyny na obrazovce.
+
+## Navedení azure pipeline
+Po pushnutí balíčku na git, je potřeba navést azure pipeline pro automatické buildění a vystavení balíču.
+
+1. Přejdeme na https://dev.azure.com/DTCZ/NPM%20TEE/_build
+2. Klikneme na tlačítko `New Pipeline`<br>![pipeline-create.png](pipeline-create.png)
+3. Vybereme `Azure Repos Git`<br>![pipeline-repo.png](pipeline-repo.png)
+4. Svůj výběr potvrdíme klikem na tlačítko `Run`<br>![pipeline-run.png](pipeline-run.png)
