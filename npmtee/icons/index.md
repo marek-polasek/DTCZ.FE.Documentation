@@ -53,4 +53,3 @@ import {allIconNames, DynamicIcon} from '@npm-tee/icons';
         <div class="mt-3">{{name}}</div>
     </div>
 </div>
-# Seznam ikonek

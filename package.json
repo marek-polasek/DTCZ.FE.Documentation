@@ -12,6 +12,6 @@
         "docs:preview": "vitepress preview"
     },
     "dependencies": {
-        "@npm-tee/icons": "^1.2.32"
+        "@npm-tee/icons": "^1.3.0"
     }
 }
