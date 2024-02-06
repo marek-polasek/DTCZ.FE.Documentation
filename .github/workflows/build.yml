@@ -49,7 +49,7 @@ jobs:
           echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:email=not-used@example.com" >> ~/.npmrc
 
       - name: Show npm config
-        run: npm config list
+        run: npm config list -l
       - name: Install dependencies
         run: npm i # or pnpm install / yarn install / bun install
       - name: Build with VitePress
