@@ -45,7 +45,7 @@ jobs:
       - name: Setup npm credentials
         run: |
           echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:username=DTCZ" >> ~/.npmrc
-          echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:_password=${{ secrets.AZURE_NPM_KEY }}" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:_password=${{secrets.AZURE_NPM_KEY}}" >> ~/.npmrc
           echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:email=not-used@example.com" >> ~/.npmrc
 
       - name: Show npm config
