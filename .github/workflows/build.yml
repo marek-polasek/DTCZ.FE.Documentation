@@ -26,6 +26,7 @@ concurrency:
 jobs:
   # Build job
   build:
+    environment: Node
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,6 +42,16 @@ jobs:
           cache: npm # or pnpm / yarn
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      - name: Setup npm credentials
+        run: |
+          run: echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:username=DTCZ" > ~/.npmrc
+          run: echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:_password=${{ secrets.AZURE_NPM_KEY }}" >> ~/.npmrc
+          run: echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:email=email@email.cz" >> ~/.npmrc
+
+          run: echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/:username=DTCZ" >> ~/.npmrc
+          run: echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/:email=email@email.cz" >> ~/.npmrc
+          run: echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/:_password=${{ secrets.AZURE_NPM_KEY }}" >> ~/.npmrc
+
       - name: Install dependencies
         run: npm ci # or pnpm install / yarn install / bun install
       - name: Build with VitePress
