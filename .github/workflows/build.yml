@@ -44,9 +44,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Setup npm credentials
         run: |
-          echo "registry=https://pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/" > ~/.npmrc
-          echo "always-auth=true" >> ~/.npmrc
-          echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:username=DTCZ" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:username=DTCZ" > ~/.npmrc
           echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:_password=${{ secrets.AZURE_NPM_KEY }}" >> ~/.npmrc
           echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:email=email@email.cz" >> ~/.npmrc
 
@@ -57,7 +55,7 @@ jobs:
       - name: Show npm config
         run: npm config list
       - name: Install dependencies
-        run: npm ci # or pnpm install / yarn install / bun install
+        run: npm i # or pnpm install / yarn install / bun install
       - name: Build with VitePress
         run: |
           npm run docs:build
