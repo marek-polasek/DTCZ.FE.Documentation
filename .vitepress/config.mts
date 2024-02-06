@@ -18,6 +18,8 @@ export default defineConfig({
                         text: "Abnb", link: "/npmtee/abnb/index"
                     }, {
                         text: "Modal-dialogs", link: "/npmtee/modal-dialogs/index"
+                    }, {
+                        text: "Icons", link: "/npmtee/icons/index"
                     }
                 ]}
         ],
@@ -46,6 +48,9 @@ export default defineConfig({
                 }, {
                     text: "Modal-dialogs",
                     link: "/npmtee/modal-dialogs/index",
+                }, {
+                    text: "Icons",
+                    link: "/npmtee/icons/index",
                 }]
             }
         },

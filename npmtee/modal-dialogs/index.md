@@ -2,7 +2,9 @@
 prev:
   text: 'AbnbTitle (nadpis)'
   link: '/npmtee/abnb/title'
-next: false
+next:
+  text: 'Icons'
+  link: '/npmtee/icons/'
 ---
 
 # Instalace
