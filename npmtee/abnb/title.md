@@ -7,20 +7,33 @@ next:
 # AbnbTitle (nadpis)
 Komponenta pro nadpisy, která je součástí balíčku `@npm-tee/abnb`
 
+## Instalace
+```
+npm i @npm-tee/abnb
+```
+
 ## Použití
+```vue {2,5}
+<script setup lang="ts">
+    import {AbnbTitle} from "@npm-tee/abnb";
+</script>
+<template>
+    <AbnbTitle>Krásný nadpis</AbnbTitle>
+</template>
+```
 
 **Styl i element h2**
-```js
+```vue
 <AbnbTitle>Krásný nadpis</AbnbTitle>
 ```
 
 **styl i element h1**
-```js
+```vue
 <AbnbTitle style-as="h1">Krásný nadpis</AbnbTitle>
 ```
 
 **Styl h1, ale element div**
-```js
+```vue
 <AbnbTitle style-as="h1" element="div">Krásný nadpis</AbnbTitle>
 ```
 

@@ -2,15 +2,18 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "My Awesome Project",
-    description: "A VitePress Site",
+    title: "FrontEnd dokumentace",
+    description: "Dokumantace pro frontend",
     base: "/DTCZ.FE.Documentation/",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            {text: 'Home', link: '/'},
-            {text: 'Examples', link: '/markdown-examples'},
-            {text: 'Hotfix', link: '/hotfix'},
+            {text: 'Obecné', items: [
+                    {
+                        text: "Hotfix", link: '/common/hotfix'
+                    }
+                ]
+            },
             {text: 'NPMTEE Balíčky', items: [
                     {
                         text: "Vytvoření balíčku", link: "/npmtee/create/index",
@@ -28,8 +31,6 @@ export default defineConfig({
             "/": {
                 text: 'Examples',
                 items: [
-                    {text: 'Markdown Examples', link: '/markdown-examples'},
-                    {text: 'Runtime API Examples', link: '/api-examples'},
                     {text: 'Hotfix', link: '/hotfix'}
                 ]
             },
@@ -44,6 +45,9 @@ export default defineConfig({
                     items: [{
                         text: "AbnbTitle (nadpis)",
                         link: "/npmtee/abnb/title"
+                    }, {
+                        text: "Gallery",
+                        link: "/npmtee/abnb/gallery",
                     }]
                 }, {
                     text: "Modal-dialogs",
