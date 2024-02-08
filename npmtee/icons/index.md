@@ -41,14 +41,12 @@ import {IconTick} from "@npm-tee/icons";
 </template>
 ```
 
-## Seznam všech dostupných ikonek ({{allIconNames.length}})
+## Seznam všech dostupných ikonek
 
 
 <script setup>
 import {allIconNames, DynamicIcon} from '@npm-tee/icons';
 </script>
-
-<div v-for="name in allIconNames.sort()" class="">{{name}}</div>
 
 <div class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-10 mt-4">
     <div v-for="name in allIconNames.sort()" class="text-center">
