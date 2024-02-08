@@ -48,7 +48,7 @@ import {allIconNames, DynamicIcon} from '@npm-tee/icons';
 </script>
 
 <div class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-10 mt-4">
-    <div v-for="name in allIconNames" class="text-center">
+    <div v-for="name in allIconNames.sort()" class="text-center">
         <DynamicIcon :name="name" class="w-10 h-10 mx-auto" />
         <div class="mt-3">{{name}}</div>
     </div>
