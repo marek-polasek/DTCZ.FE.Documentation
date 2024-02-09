@@ -2,6 +2,7 @@
 next:
   text: 'ModalDialog (modální okno)'
   link: '/npmtee/modal-dialogs/index'
+outline: deep
 ---
 
 # AbnbTitle (nadpis)
@@ -22,17 +23,17 @@ npm i @npm-tee/abnb
 </template>
 ```
 
-**Styl i element h2**
+### Styl i element h2
 ```vue
 <AbnbTitle>Krásný nadpis</AbnbTitle>
 ```
 
-**styl i element h1**
+### styl i element h1
 ```vue
 <AbnbTitle style-as="h1">Krásný nadpis</AbnbTitle>
 ```
 
-**Styl h1, ale element div**
+### Styl h1, ale element div
 ```vue
 <AbnbTitle style-as="h1" element="div">Krásný nadpis</AbnbTitle>
 ```

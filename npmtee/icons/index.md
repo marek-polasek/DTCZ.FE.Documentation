@@ -3,6 +3,7 @@ prev:
   text: 'ModalDialog (modální okno)'
   link: '/npmtee/modal-dialogs/index'
 next: false
+outline: deep
 ---
 
 # Instalace
