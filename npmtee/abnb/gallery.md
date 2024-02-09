@@ -10,6 +10,16 @@ Komponenty pro galerie `@npm-tee/abnb`
 npm i @npm-tee/abnb
 ```
 
+## Styly
+Je nutné importovat styly a to buď v js
+```js
+import "@npm-tee/abnb/style.css";
+```
+nebo jako styly v css
+```css
+@import url("@npm-tee/abnb/style.css");
+```
+
 ## Použití
 K dispozici máme tři komponenty pro galerii `AbnbGalleryInline`, `AbnbGalleryGrid` a `AbnbGallerySingle`.
 
@@ -124,6 +134,20 @@ Definice v grafickém manuálu [desktop verze](https://www.figma.com/file/mJ2TSN
 | `grid-button-text` | `string`                                                   | `""` | Pouze pro `AbnbGalleryGrid`, není-li definováno, nebo je prázdný řetězec, obecné tlačítko pro otevření detailu galerie se nezobrazí |
 
 ## Proměnné pro styly
+
+::: info Seznam všech proměnných pro zkopírování
+```css
+--abnbGalleryDetail-maxWidth: 640px;
+--abnbGalleryGrid-buttonDefaultColorText: hsla(213, 100%, 23%, 1);
+--abnbGalleryGrid-buttonDefaultColorBackground: theme("colors.white");
+--abnbGalleryGrid-buttonHoverColorBackground: theme("colors.white");
+--abnbGalleryGrid-buttonHoverColorBackground: hsla(209, 100%, 42%, 1);
+--abnbGalleryGrid-buttonBorderRadius: theme("borderRadius.md");
+--abnbGallery-imageRadius: theme("borderRadius.lg");
+--abnbGallery-counterRadius: theme("borderRadius.lg");
+```
+:::
+
 ### `--abnbGallery-imageRadius`
 | Výchozí hodnota           | Popis                                                                   |
 |---------------------------|-------------------------------------------------------------------------|
