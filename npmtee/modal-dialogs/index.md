@@ -5,14 +5,20 @@ prev:
 next:
   text: 'Icons'
   link: '/npmtee/icons/'
+outline: deep
 ---
 # Instalace
 ```
 npm i @npm-tee/modal-dialogs
 ```
 ## Použití
+K dipsozici máme dvě komponenty pro modální okno `ModalDialog` a `ModalGallery`.
+### `ModalDialog`
+Klasický dialog, jehož velikost určuje samotný obsah v dialogu.
 
-Minimální vzor
+![modal dialog](./modal-dialog.png)
+
+**Minimální vzor**
 ```vue
 <script setup lang="ts">
     import {ref} from "vue";
@@ -29,7 +35,8 @@ Minimální vzor
     </ModalDialog>
 </template>
 ```
-Ukázka s titulkem a patičkou
+
+**Ukázka s titulkem a patičkou**
 ```vue{12,13,15,16,18}
 <script setup lang="ts">
     import {ref} from "vue";
@@ -67,3 +74,24 @@ provide("contentPadding", contentPadding);
 ```
 :::
 
+### `ModalGallery`
+Dialog, který vyplní celou plochu viewportu (vykreslovací plocha prohlížeče) s animací vyjíždění z levé strany.
+
+![modal gallery](./modal-gallery.png)
+
+```vue
+<script setup lang="ts">
+    import {ref} from "vue";
+    import {ModalGallery} from "@npm-tee/modal-dialogs";
+
+    const showModal = ref(false);
+</script>
+
+<template>
+    <button @click="showModal = true">Otevřít okno</button>
+
+    <ModalGallery v-model="showModal">
+        Obsah popup okna
+    </ModalGallery>
+</template>
+```
