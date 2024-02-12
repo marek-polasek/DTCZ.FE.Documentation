@@ -13,6 +13,11 @@ npm i @npm-tee/modal-dialogs
 ```
 ## Použití
 K dipsozici máme dvě komponenty pro modální okno `ModalDialog` a `ModalGallery`.
+
+:::warning POZOR
+Pro zanořené modály (modál v modálu) je potřeba používat vždy modály z této knihovny. Pokud použijeme modál z této knihovnu do kterého zanoříme `Dialog` z headlessui, tak při zavření či kliknutí do headlessui modálu, se zavřou všechny modály najednou.
+:::
+
 ### `ModalDialog`
 Klasický dialog, jehož velikost určuje samotný obsah v dialogu.
 
