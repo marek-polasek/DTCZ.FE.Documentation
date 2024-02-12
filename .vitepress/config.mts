@@ -11,6 +11,9 @@ export default defineConfig({
             {text: 'Obecné', items: [
                     {
                         text: "Hotfix", link: '/common/hotfix'
+                    },
+                    {
+                        text: "Testování", link: '/common/tests'
                     }
                 ]
             },
@@ -39,7 +42,13 @@ export default defineConfig({
             "/": {
                 text: 'Examples',
                 items: [
-                    {text: 'Hotfix', link: '/hotfix'}
+                    {text: 'Hotfix', link: '/common/hotfix'}
+                ]
+            },
+            "/tests": {
+                text: 'Testování',
+                items: [
+                    {text: 'Testování', link: '/common/tests'}
                 ]
             },
             "/npmtee/": {
