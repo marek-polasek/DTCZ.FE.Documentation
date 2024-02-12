@@ -20,9 +20,17 @@ export default defineConfig({
                     }, {
                         text: "Abnb", link: "/npmtee/abnb/index"
                     }, {
-                        text: "Modal-dialogs", link: "/npmtee/modal-dialogs/index"
+                        text: "Form elements", link: "/npmtee/form-elements/index"
+                    }, {
+                        text: "GTM push", link: "/npmtee/gtm-push/index"
                     }, {
                         text: "Icons", link: "/npmtee/icons/index"
+                    }, {
+                        text: "Locale", link: "/npmtee/locale/index"
+                    }, {
+                        text: "Modal-dialogs", link: "/npmtee/modal-dialogs/index"
+                    }, {
+                        text: "Url", link: "/npmtee/url/index"
                     }
                 ]}
         ],
@@ -50,11 +58,23 @@ export default defineConfig({
                         link: "/npmtee/abnb/gallery",
                     }]
                 }, {
-                    text: "Modal-dialogs",
-                    link: "/npmtee/modal-dialogs/index",
+                    text: "Form elements",
+                    link: "/npmtee/form-elements/index"
+                }, {
+                    text: "GTM push",
+                    link: "/npmtee/gtm-push/index"
                 }, {
                     text: "Icons",
                     link: "/npmtee/icons/index",
+                }, {
+                    text: "Locale",
+                    link: "/npmtee/locale/index"
+                }, {
+                    text: "Modal-dialogs",
+                    link: "/npmtee/modal-dialogs/index",
+                }, {
+                    text: "Url",
+                    link: "/npmtee/url/index"
                 }]
             }
         },
