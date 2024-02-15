@@ -42,7 +42,7 @@ Klasický dialog, jehož velikost určuje samotný obsah v dialogu.
 ```
 
 **Modal s vlastní šířkou**
-```vue
+```vue{12}
 <script setup lang="ts">
     import {ref} from "vue";
     import {ModalDialog} from "@npm-tee/modal-dialogs";
@@ -53,7 +53,9 @@ Klasický dialog, jehož velikost určuje samotný obsah v dialogu.
 <template>
     <button @click="showModal = true">Otevřít okno</button>
 
-    <ModalDialog v-model="showModal" dialog-panel-class="w-full max-w-[300px] lg:max-w-[700px]">
+    <ModalDialog v-model="showModal"
+        dialog-panel-class="w-full max-w-[300px] lg:max-w-[700px]"
+    >
         Obsah popup okna
     </ModalDialog>
 </template>
