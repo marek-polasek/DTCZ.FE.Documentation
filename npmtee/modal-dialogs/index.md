@@ -96,6 +96,11 @@ const contentPadding = ref({
 provide("contentPadding", contentPadding);
 ```
 :::
+#### Props
+
+| Prop               | Definice | Výchozí   | Popis                                                                                               |
+|--------------------|----------|-----------|-----------------------------------------------------------------------------------------------------|
+| `dialogPanelClass` | `string` | `""` | Přidá css classy modal dialogu (vnitřní bílý obsah). Možno použít např. pro definici šířky okna ap. |
 
 ### `ModalGallery`
 Dialog, který vyplní celou plochu viewportu (vykreslovací plocha prohlížeče) s animací vyjíždění z levé strany.
@@ -118,3 +123,17 @@ Dialog, který vyplní celou plochu viewportu (vykreslovací plocha prohlížeč
     </ModalGallery>
 </template>
 ```
+## Proměnné pro styly
+
+::: info Seznam všech proměnných pro zkopírování
+```css
+--modalDialog-roundingWindow: theme("borderRadius.xl");
+```
+:::
+
+### `--modalDialog-roundingWindow`
+| Výchozí hodnota           | Popis                                    |
+|---------------------------|------------------------------------------|
+| theme("borderRadius.xl")  | Velikost zaoblení rohů modálního dialogu |
+
+![](./modalDialog-roundingWindow.png)
