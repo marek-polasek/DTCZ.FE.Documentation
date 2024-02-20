@@ -9,7 +9,7 @@ Nový NPMTEE balíček vytvoříme jednoduše pomocí "vytvářecího balíčku"
 
 ## Příprava
 
-Ve složce, kde se bude skript spouštět musí být soubor `.npmrc` s títmto obsahem.
+Ve složce, kde budeme balíček chtít vytvořit se musí nacházet soubor `.npmrc` s títmto obsahem.
 
 ```
 @npm-tee:registry=https://pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/
@@ -17,7 +17,7 @@ always-auth=true
 ```
 
 ## Spuštění
-Balíček ve složce spustíme příkazem `npx @npm-tee/creator` dále se řídíme pokyny na obrazovce.
+Ve složce ve které chceme balíček vytvořit spustíme příkaz `npx @npm-tee/creator` dále se řídíme pokyny na obrazovce.
 
 :::warning Pozor na styly
 Ve vytvořeném balíčku existují dva soubory stylů
