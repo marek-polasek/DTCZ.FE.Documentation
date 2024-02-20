@@ -19,6 +19,11 @@ always-auth=true
 ## Spuštění
 Balíček ve složce spustíme příkazem `npx @npm-tee/creator` dále se řídíme pokyny na obrazovce.
 
+:::warning Pozor na styly
+Ve vytvořeném balíčku existují dva soubory stylů
+- **tailwind.css** - slouží pouze pro lokální testování, takže zde nepřidávat žádné styly, které se mají exportovat s balíčkem
+- **style.css** - styly které se exportují s balíčkem v `main.ts` je `import "./style.css";`, který zajistí, že se styly zbuildí s balíčkem.
+:::
 ## Navedení azure pipeline
 Po pushnutí balíčku na git, je potřeba navést azure pipeline pro automatické buildění a vystavení balíču.
 
