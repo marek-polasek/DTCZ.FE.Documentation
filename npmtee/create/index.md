@@ -2,6 +2,7 @@
 next:
   text: 'Abnb'
   link: '/npmtee/abnb/index'
+outline: deep
 ---
 
 # Vytvoření NPM balíčku
