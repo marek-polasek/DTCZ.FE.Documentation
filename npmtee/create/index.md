@@ -5,11 +5,11 @@ next:
 outline: deep
 ---
 
-# Vytvoření NPM balíčku
-Výsledkem vytvořeného balíčku je složka s potřebnými soubory.
+# Create
+Balíček umožňující snadné prvnotní vytvoření nového balíčku. Výsledkem vytvořeného balíčku je složka s potřebnými soubory.
 
 :::info Testy
-V balíčku je nastaveny vitest, pro testy je napojen na pipeline a proto, pokud testy neprojdou, balíček nebude vystaven.
+V balíčku je pro testy nastaveny vitest, který je zároveň napojen na pipeline a proto, pokud testy neprojdou, balíček nebude vystaven.
 :::
 
 :::warning Pozor na styly
@@ -27,7 +27,7 @@ Ve složce, kde budeme balíček chtít vytvořit se musí nacházet soubor `.np
 always-auth=true
 ```
 
-:::info Složka se vytovří automaticky
+:::info Složka se vytvoří automaticky
 Příkaz `npx @npm-tee/creator` po zadání názvu balíčku, automaticky vytvoří složku s potřebným názvem. 
 :::
 
