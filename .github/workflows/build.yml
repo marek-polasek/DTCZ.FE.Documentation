@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout
+        uses: actions/checkout@latest
         with:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
       # - uses: pnpm/action-setup@v2 # Uncomment this if you're using pnpm
@@ -41,7 +41,7 @@ jobs:
           node-version: 20
           cache: npm # or pnpm / yarn
       - name: Setup Pages
-        uses: actions/configure-pages
+        uses: actions/configure-pages@latest
       - name: Setup npm credentials
         run: |
           echo "//pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/:username=Github" >> ~/.npmrc
@@ -60,7 +60,7 @@ jobs:
           npm run docs:build
           touch .vitepress/dist/.nojekyll
       - name: Upload artifact
-        uses: actions/upload-pages-artifact
+        uses: actions/upload-pages-artifact@latest
         with:
           path: .vitepress/dist
 
@@ -75,4 +75,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages
+        uses: actions/deploy-pages@latest
