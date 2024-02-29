@@ -96,7 +96,7 @@ Klasický dialog, jehož velikost určuje samotný obsah v dialogu.
 </template>
 ```
 ::: info
-Komponenty umístěné ve `slot:default` mají přístup k proměnné `contentPadding`, která obsahuje velikost levého a pravého paddingu kolem obsahu modálního dialogu.
+Komponenty umístěné ve `slot:default` a `slot:footer` mají přístup k proměnné `contentPadding`, která obsahuje velikost levého a pravého paddingu kolem obsahu v daném slotu.
 
 Hodnoty paddingů se počítají pomocí [window.getComputedStyle()](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle).
 
