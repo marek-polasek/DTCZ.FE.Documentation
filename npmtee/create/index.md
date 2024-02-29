@@ -20,11 +20,12 @@ Ve vytvořeném balíčku existují dva soubory stylů
 
 ## Příprava
 
-Ve složce, kde budeme balíček chtít vytvořit se musí nacházet soubor `.npmrc` s tímto obsahem.
+Ve složce (např. `c:/www/`, nikoliv `c:/www/NPMTEE.balicek`), kde budeme balíček chtít vytvořit se musí nacházet soubor `.npmrc`.
 
+Pro vytvoření `.npmrc` spustíme v terminálu:
 ```
-@npm-tee:registry=https://pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/
-always-auth=true
+echo '@npm-tee:registry=https://pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/
+always-auth=true' > .npmrc
 ```
 
 :::info Složka se vytvoří automaticky
@@ -60,7 +61,7 @@ Napojit repozitář lze pomocí příkazové řádky, nebo pomocí IDE.
 ### Napojení pomocí IDE
 **TODO: doplnit dle potřeby**
 
-## Navedení azure pipeline
+## Zavedení azure pipeline
 Po pushnutí balíčku na git, je potřeba navést azure pipeline pro automatické buildění a vystavení balíčku.
 
 1. Přejdeme na https://dev.azure.com/DTCZ/NPM%20TEE/_build
