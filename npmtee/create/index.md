@@ -22,11 +22,16 @@ Ve vytvořeném balíčku existují dva soubory stylů
 
 Ve složce (např. `c:/www/`, nikoliv `c:/www/NPMTEE.balicek`), kde budeme balíček chtít vytvořit se musí nacházet soubor `.npmrc`.
 
-Pro vytvoření `.npmrc` spustíme v terminálu:
+::: code-group
+``` [Obsah souboru]
+@npm-tee:registry=https://pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/
+always-auth=true
 ```
-echo '@npm-tee:registry=https://pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/
-always-auth=true' > .npmrc
+``` [Příkaz pro vytvoření v terminálu]
+echo @npm-tee:registry=https://pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/ > .npmrc
+echo always-auth=true >> .npmrc
 ```
+:::
 
 :::info Složka se vytvoří automaticky
 Příkaz `npx @npm-tee/creator` po zadání názvu balíčku, automaticky vytvoří složku s potřebným názvem. 
