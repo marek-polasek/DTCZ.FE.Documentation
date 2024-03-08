@@ -32,6 +32,8 @@ export default defineConfig({
                     }, {
                         text: "Icons", link: "/npmtee/icons/index"
                     }, {
+                        text: "Inline date picker", link: "/npmtee/inline-date-picker/index"
+                    }, {
                         text: "Locale", link: "/npmtee/locale/index"
                     }, {
                         text: "Modal dialogs", link: "/npmtee/modal-dialogs/index"
@@ -80,6 +82,9 @@ export default defineConfig({
                 }, {
                     text: "Icons",
                     link: "/npmtee/icons/index",
+                }, {
+                    text: "Inline date picker",
+                    link: "/npmtee/inline-date-picker/index",
                 }, {
                     text: "Locale",
                     link: "/npmtee/locale/index"
