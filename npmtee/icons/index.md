@@ -5,8 +5,9 @@ prev:
 next: false
 outline: deep
 ---
+# Icons
 
-# Instalace
+## Instalace
 ```
 npm i @npm-tee/icons
 ```

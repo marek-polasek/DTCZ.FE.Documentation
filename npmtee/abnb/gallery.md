@@ -140,7 +140,7 @@ Definice v grafickém manuálu [desktop verze](https://www.figma.com/file/mJ2TSN
 --abnbGalleryDetail-maxWidth: 640px;
 --abnbGalleryGrid-buttonDefaultColorText: hsla(213, 100%, 23%, 1);
 --abnbGalleryGrid-buttonDefaultColorBackground: theme("colors.white");
---abnbGalleryGrid-buttonHoverColorBackground: theme("colors.white");
+--abnbGalleryGrid-buttonHoverColorText: theme("colors.white");
 --abnbGalleryGrid-buttonHoverColorBackground: hsla(209, 100%, 42%, 1);
 --abnbGalleryGrid-buttonBorderRadius: theme("borderRadius.md");
 --abnbGallery-imageRadius: theme("borderRadius.lg");

@@ -11,10 +11,21 @@ outline: deep
 ```
 npm i @npm-tee/modal-dialogs
 ```
+
+## Styly
+Je nutné importovat styly a to buď v js
+```js
+import "@npm-tee/modal-dialogs/style.css";
+```
+nebo jako styly v css
+```css
+@import url("@npm-tee/modal-dialogs/style.css");
+```
+
 ## Použití
 K dispozici máme dvě komponenty pro modální okno `ModalDialog` a `ModalGallery`.
 
-:::warning POZOR
+:::warning Pozor na zanořené modály
 Pro zanořené modály (modál v modálu) je potřeba používat vždy modály z této knihovny. Pokud použijeme modál z této knihovnu do kterého zanoříme `Dialog` z headlessui, tak při zavření či kliknutí do headlessui modálu, se zavřou všechny modály najednou.
 :::
 
@@ -85,7 +96,7 @@ Klasický dialog, jehož velikost určuje samotný obsah v dialogu.
 </template>
 ```
 ::: info
-Komponenty umístěné ve `slot:default` mají přístup k proměnné `contentPadding`, která obsahuje velikost levého a pravého paddingu kolem obsahu modálního dialogu.
+Komponenty umístěné ve `slot:default` a `slot:footer` mají přístup k proměnné `contentPadding`, která obsahuje velikost levého a pravého paddingu kolem obsahu v daném slotu.
 
 Hodnoty paddingů se počítají pomocí [window.getComputedStyle()](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle).
 

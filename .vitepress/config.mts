@@ -6,6 +6,9 @@ export default defineConfig({
     description: "Dokumantace pro frontend",
     base: "/DTCZ.FE.Documentation/",
     themeConfig: {
+        search: {
+            provider: 'local'
+        },
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: 'Obecné', items: [
@@ -29,11 +32,15 @@ export default defineConfig({
                     }, {
                         text: "Icons", link: "/npmtee/icons/index"
                     }, {
+                        text: "Inline date picker", link: "/npmtee/inline-date-picker/index"
+                    }, {
                         text: "Locale", link: "/npmtee/locale/index"
                     }, {
-                        text: "Modal-dialogs", link: "/npmtee/modal-dialogs/index"
+                        text: "Modal dialogs", link: "/npmtee/modal-dialogs/index"
                     }, {
                         text: "Url", link: "/npmtee/url/index"
+                    }, {
+                        text: "Vue app mounter", link: "/npmtee/vue-app-mounter/index"
                     }
                 ]}
         ],
@@ -76,14 +83,20 @@ export default defineConfig({
                     text: "Icons",
                     link: "/npmtee/icons/index",
                 }, {
+                    text: "Inline date picker",
+                    link: "/npmtee/inline-date-picker/index",
+                }, {
                     text: "Locale",
                     link: "/npmtee/locale/index"
                 }, {
-                    text: "Modal-dialogs",
+                    text: "Modal dialogs",
                     link: "/npmtee/modal-dialogs/index",
                 }, {
                     text: "Url",
                     link: "/npmtee/url/index"
+                }, {
+                    text: "Vue app mounter",
+                    link: "/npmtee/vue-app-mounter/index"
                 }]
             }
         },
