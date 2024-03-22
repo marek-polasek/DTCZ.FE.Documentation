@@ -45,17 +45,24 @@ Definice v [grafickém manuálu](https://www.figma.com/file/mJ2TSNVSOhrJp1vHakNI
     import { ref } from "vue";
     import {AbnbGalleryInline} from "@npm-tee/abnb";
 
-    type Image = {
-        src: string;
+    type TypeGalleryImage = {
+        source: {
+            small: string;
+            medium: string;
+            large: string;
+        },
         alt: string;
         description?: string;
     }
-
-    const images = ref<Array<Image>>([{
-        src: "./image01.jpeg",
+    const images = ref<Array<TypeGalleryImage>>([{
+        source: {
+            small: "./imageSmall.jpeg",
+            medium: "./imageMedium.jpeg",
+            large: "./imageLarge.jpeg"
+        },
         alt: "",
+        description: "Kočička s klubíčkem"
     }])
-
 </script>
 <template>
     <AbnbGalleryInline :images="images" />
@@ -73,20 +80,24 @@ Definice v [grafickém manuálu](https://www.figma.com/file/mJ2TSNVSOhrJp1vHakNI
     import {computed, ref} from "vue";
     import {AbnbGalleryGrid} from "@npm-tee/abnb";
 
-    type Image = {
-        src: string;
+    type TypeGalleryImage = {
+        source: {
+            small: string;
+            medium: string;
+            large: string;
+        },
         alt: string;
         description?: string;
     }
-
-    const images = ref<Array<Image>>([{
-        src: "./image01.jpeg",
+    const images = ref<Array<TypeGalleryImage>>([{
+        source: {
+            small: "./imageSmall.jpeg",
+            medium: "./imageMedium.jpeg",
+            large: "./imageLarge.jpeg"
+        },
         alt: "",
+        description: "Kočička s klubíčkem"
     }])
-
-    const buttonText = computed(() => {
-        return `Zobrazit ${images.value.length} fotek`;
-    })
 </script>
 <template>
     <AbnbGalleryGrid :images="images" :grid-button-text="buttonText"/>
@@ -110,14 +121,21 @@ Definice v grafickém manuálu [desktop verze](https://www.figma.com/file/mJ2TSN
     import { ref } from "vue";
     import {AbnbGallerySingle} from "@npm-tee/abnb";
 
-    type Image = {
-        src: string;
+    type TypeGalleryImage = {
+        source: {
+            small: string;
+            medium: string;
+            large: string;
+        },
         alt: string;
         description?: string;
-    }
-    
-    const images = ref<Array<Image>>([{
-        src: "./image01.jpeg",
+    }    
+    const images = ref<Array<TypeGalleryImage>>([{
+        source: {
+            small: "./imageSmall.jpeg",
+            medium: "./imageMedium.jpeg",
+            large: "./imageLarge.jpeg"
+        },
         alt: "",
         description: "Kočička s klubíčkem"
     }])
@@ -128,11 +146,25 @@ Definice v grafickém manuálu [desktop verze](https://www.figma.com/file/mJ2TSN
 ```
 ## Props
 
-| Prop               | Definice                                                   | Výchozí         | Popis                                                                                                                               |
-|--------------------|------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| `images`           | `Array<{src: string; alt: string; description?: string;}>` |            | Určuje nastavení tailwind class pro **font-weight**, **line-height** a **font-size**                                                |
-| `grid-button-text` | `string`                                                   | `""` | Pouze pro `AbnbGalleryGrid`, není-li definováno, nebo je prázdný řetězec, obecné tlačítko pro otevření detailu galerie se nezobrazí |
+| Prop               | Definice                                                                                                 | Výchozí         | Popis                                                                                                                               |
+|--------------------|----------------------------------------------------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| `images`           | `Array<{source: { small: string; medium: string; large: string; }, alt: string; description?: string;}>` |            | Seznam obrázku, které se mají v galerii zobrazovat                                                                                  |
+| `grid-button-text` | `string`                                                                                                 | `""` | Pouze pro `AbnbGalleryGrid`, není-li definováno, nebo je prázdný řetězec, obecné tlačítko pro otevření detailu galerie se nezobrazí |
 
+### Source
+Kde se používají jednotlivé velikosti fotek
+
+#### small
+pouze pro zobrazení typu `AbnbGalleryInline`
+
+#### medium
+1. pro mobilní zobrazení fotogalerie
+2. pro zobrazení typu `AbnbGalleryGrid`
+3. pro rozkliku galerie, kde se fotky vypíšou v samotném okně v gridu pod sebou
+
+#### large
+1. pokud galerie není v mobilním zobrazení a je typu `AbnbGallerySingle`
+2. při zobrazení detailu fotky (a to i pro mobilní zobrazení) viz [grafika ve figmě](https://www.figma.com/file/mJ2TSNVSOhrJp1vHakNIgB/CK-FISCHER?type=design&node-id=3705-3303&mode=design&t=r98BNh2clxDBgDPF-4)
 ## Proměnné pro styly
 
 ::: info Seznam všech proměnných pro zkopírování
