@@ -146,10 +146,11 @@ Definice v grafickém manuálu [desktop verze](https://www.figma.com/file/mJ2TSN
 ```
 ## Props
 
-| Prop               | Definice                                                                                                 | Výchozí         | Popis                                                                                                                               |
-|--------------------|----------------------------------------------------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| `images`           | `Array<{source: { small: string; medium: string; large: string; }, alt: string; description?: string;}>` |            | Seznam obrázku, které se mají v galerii zobrazovat                                                                                  |
-| `grid-button-text` | `string`                                                                                                 | `""` | Pouze pro `AbnbGalleryGrid`, není-li definováno, nebo je prázdný řetězec, obecné tlačítko pro otevření detailu galerie se nezobrazí |
+| Prop                            | Definice                                                                                                 | Výchozí         | Popis                                                                                                                               |
+|---------------------------------|----------------------------------------------------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| `images`                        | `Array<{source: { small: string; medium: string; large: string; }, alt: string; description?: string;}>` |            | Seznam obrázku, které se mají v galerii zobrazovat                                                                                  |
+| `grid-button-text`              | `string`                                                                                                 | `""` | Pouze pro `AbnbGalleryGrid`, není-li definováno, nebo je prázdný řetězec, obecné tlačítko pro otevření detailu galerie se nezobrazí |
+| `mobile-resolution-till-pixels` | `number`                                                                                                 | `400` | Určuje od jaké šířky v pixelech obalového se galerie přepne na mobilní zobrazení                                                    |
 
 ### Source
 Kde se používají jednotlivé velikosti fotek
