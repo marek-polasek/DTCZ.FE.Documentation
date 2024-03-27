@@ -221,4 +221,16 @@ Konečná url adresa pro volání mokovacího endpointu se skládá následovně
 
 **Příklad pro [KLÍČ_VARIANTY]**
 
+Klíč varianty je možné nastavovat per komponentu, nebo globálně pomocí url.
+
+**Nastavení v komponentě**
+Pro nastavení varianty v komponentě slouží data atribut **data-mock**
+```html
+<div data-component-name="nazev-komponenty" data-mock="varianta2"></div>
+```
+
+**Nastavení v url**
 Pro url `http://www.fischer.cz/neco/jineho/index-step2-verze-1.1.html?p=45`, bude klíč varianty `step2-verze-1.1`
+
+**Priorita**
+Pokud není varianta nastavená v komponentě, tak se použije varianta nastavená v url.
