@@ -30,11 +30,11 @@ Pro zanořené modály (modál v modálu) je potřeba používat vždy modály z
 :::
 
 ### `ModalDialog`
-Klasický dialog, jehož velikost určuje samotný obsah v dialogu.
-
+Modální dialog má maximální šířku vždy nastavenou na 720px.
 ![modal dialog](./modal-dialog.png)
 
 **Minimální vzor**
+Takový dialog má nastaveno `width: 100%;` a maximální šířku 720px - což mají všechny druhy dialogů
 ```vue
 <script setup lang="ts">
     import {ref} from "vue";
@@ -47,6 +47,24 @@ Klasický dialog, jehož velikost určuje samotný obsah v dialogu.
     <button @click="showModal = true">Otevřít okno</button>
 
     <ModalDialog v-model="showModal">
+        Obsah popup okna
+    </ModalDialog>
+</template>
+```
+
+**Modal s šířkou dle obsahu**
+```vue
+<script setup lang="ts">
+    import {ref} from "vue";
+    import {ModalDialog} from "@npm-tee/modal-dialogs";
+
+    const showModal = ref(false);
+</script>
+
+<template>
+    <button @click="showModal = true">Otevřít okno</button>
+
+    <ModalDialog v-model="showModal" width-based-on-content>
         Obsah popup okna
     </ModalDialog>
 </template>
@@ -65,6 +83,7 @@ Klasický dialog, jehož velikost určuje samotný obsah v dialogu.
     <button @click="showModal = true">Otevřít okno</button>
 
     <ModalDialog v-model="showModal"
+        width-based-on-content
         dialog-panel-class="w-full max-w-[300px] lg:max-w-[700px]"
     >
         Obsah popup okna
@@ -111,9 +130,10 @@ provide("contentPadding", contentPadding);
 :::
 #### Props
 
-| Prop               | Definice | Výchozí   | Popis                                                                                               |
-|--------------------|----------|-----------|-----------------------------------------------------------------------------------------------------|
-| `dialogPanelClass` | `string` | `""` | Přidá css classy modal dialogu (vnitřní bílý obsah). Možno použít např. pro definici šířky okna ap. |
+| Prop                     | Definice | Výchozí | Popis                                                                                               |
+|--------------------------|----------|---------|-----------------------------------------------------------------------------------------------------|
+| `dialogPanelClass`       | `string` | `""`    | Přidá css classy modal dialogu (vnitřní bílý obsah). Možno použít např. pro definici šířky okna ap. |
+| `width-based-on-content` | `boolean` | `false`| Popup si nenastavuje žádnou velikost                                                                |
 
 ### `ModalGallery`
 Dialog, který vyplní celou plochu viewportu (vykreslovací plocha prohlížeče) s animací vyjíždění z levé strany.
