@@ -31,6 +31,7 @@ Pro zanořené modály (modál v modálu) je potřeba používat vždy modály z
 
 ### `ModalDialog`
 Modální dialog má maximální šířku vždy nastavenou na 720px.
+
 ![modal dialog](./modal-dialog.png)
 
 **Minimální vzor**
