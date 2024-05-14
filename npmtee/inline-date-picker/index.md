@@ -44,7 +44,10 @@ Definice v [grafickém manuálu](https://www.figma.com/file/mJ2TSNVSOhrJp1vHakNI
     <InlineDatePickerInterval v-model="selectedDates" :calendars-count="2"  class="w-full grid grid-cols-2 gap-6" />
 </template>
 ```
-
+## Události
+| Událost                | Definice                                             | Popis                                                                    |
+|------------------------|------------------------------------------------------|--------------------------------------------------------------------------|
+| `elementsCountChanges` | `elementsCountChanges(elements: Array<HTMLElement>)` | Při změně počtů kalednářů, vrací pole HTML elementů, pro dané kalendáře |
 ## Props
 
 | Prop                   | Definice         | Výchozí      | Popis                                                                                                                                                  |
