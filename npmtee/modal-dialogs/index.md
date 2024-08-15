@@ -131,10 +131,11 @@ provide("contentPadding", contentPadding);
 :::
 #### Props
 
-| Prop                     | Definice | Výchozí | Popis                                                                                               |
-|--------------------------|----------|---------|-----------------------------------------------------------------------------------------------------|
-| `dialogPanelClass`       | `string` | `""`    | Přidá css classy modal dialogu (vnitřní bílý obsah). Možno použít např. pro definici šířky okna ap. |
-| `width-based-on-content` | `boolean` | `false`| Popup si nenastavuje žádnou velikost                                                                |
+| Prop                     | Definice                           | Výchozí  | Popis                                                                                                                                |
+|--------------------------|------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------|
+| `dialogPanelClass`       | `string`                           | `""`     | Přidá css classy modal dialogu (vnitřní bílý obsah). Možno použít např. pro definici šířky okna ap.                                  |
+| `width-based-on-content` | `boolean`                          | `false`  | Popup si nenastavuje žádnou velikost jinak má vždy šířku nastavenou na 100% a skutežnou velikost nastavuje parameter `max-width-size`  |
+| `max-width-size`         | `small \| medium \| noRestriction` | `medium` | Maximální šířka popupka `small=492px`, `medium=720px` a `noRestriction` znamená, že maximální šířka popup okna nebude nijak oemezena |
 
 ### `ModalGallery`
 Dialog, který vyplní celou plochu viewportu (vykreslovací plocha prohlížeče) s animací vyjíždění z levé strany.
