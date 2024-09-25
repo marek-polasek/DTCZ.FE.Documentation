@@ -22,9 +22,9 @@ export default defineConfig({
             },
             {text: 'NPMTEE Balíčky', items: [
                     {
-                        text: "Vytvoření balíčku", link: "/npmtee/create/index",
-                    }, {
                         text: "Abnb", link: "/npmtee/abnb/index"
+                    }, {
+                        text: "Brand source logo", link: "/npmtee/brand-source-logo/index"
                     }, {
                         text: "Form elements", link: "/npmtee/form-elements/index"
                     }, {
@@ -39,6 +39,8 @@ export default defineConfig({
                         text: "Modal dialogs", link: "/npmtee/modal-dialogs/index"
                     }, {
                         text: "Url", link: "/npmtee/url/index"
+                    }, {
+                        text: "Vytvoření balíčku", link: "/npmtee/create/index",
                     }, {
                         text: "Vue app mounter", link: "/npmtee/vue-app-mounter/index"
                     }
@@ -61,9 +63,6 @@ export default defineConfig({
             "/npmtee/": {
                 text: "NPM Balíčky",
                 items: [{
-                    text: "Vytvoření balíčku",
-                    link: "/npmtee/create/index"
-                }, {
                     text: "Abnb",
                     link: "/npmtee/abnb/index",
                     items: [{
@@ -73,6 +72,9 @@ export default defineConfig({
                         text: "Gallery",
                         link: "/npmtee/abnb/gallery",
                     }]
+                }, {
+                    text: "Brand source logo",
+                    link: "/npmtee/brand-source-logo/index"
                 }, {
                     text: "Form elements",
                     link: "/npmtee/form-elements/index"
@@ -94,6 +96,9 @@ export default defineConfig({
                 }, {
                     text: "Url",
                     link: "/npmtee/url/index"
+                }, {
+                    text: "Vytvoření balíčku",
+                    link: "/npmtee/create/index"
                 }, {
                     text: "Vue app mounter",
                     link: "/npmtee/vue-app-mounter/index"
