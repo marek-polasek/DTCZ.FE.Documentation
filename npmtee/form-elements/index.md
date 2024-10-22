@@ -19,6 +19,26 @@ nebo jako styly v css
 
 # FormButton - tlačítko
 
+```vue
+<style>
+    import {FormButton} from "@npm-tee/form-elements";
+</style>
+<template>
+    <FormButton>Tlačítko</FormButton>
+</template>
+```
+## Slots
+
+## Props
+
+| Prop       | Definice                                  | Výchozí     | Popis                                                                                                                                  |
+|------------|-------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| `as`       | `"button" \| "anchor" \| "div" \| "span"` | `"button"`  | Nepovinná položka určující typ html elementu tlačítka                                                                                  |
+| `href`     | `string`                                  | `""`        | Nepovinná položka, která slouží jako hodnota `href` pouze pokud je `props.as` nastaven na hodnotu `anchor`                             |
+| `type`     | `"button" \| "submit" \| "reset"`         | `undefined` | Nepovinná položka, která říká jakou hodnotu bude mít html atribut `type`. Vypisuje se pouze pokud je `props.as` nastaven jako `button` |
+| `disabled` | `boolean`                                 | `false`     | Nastaví styly tlačítka pro neaktivní variantu. V případě `props.as === "anchor"` nevypíše do odkazu `props.href`                       |
+| `loading`  | `boolean`                                 | `false`     | Pokud je `true` tak vykreslí `slot.loading` a skryje `slot.suffix`                                                                     |
+
 ::: info Seznam všech proměnných pro zkopírování
 ```css
 --button-primary-default-background: theme(colors.blue.950);
