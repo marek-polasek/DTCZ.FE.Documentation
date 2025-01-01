@@ -7,6 +7,9 @@ hero:
   text: "Dokumentace"
   actions:
     - theme: brand
+      text: Best Practice
+      link: /common/best-practice
+    - theme: alt
       text: Obecné
       link: /common/hotfix
     - theme: alt

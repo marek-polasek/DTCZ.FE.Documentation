@@ -5,6 +5,7 @@ export default defineConfig({
     title: "FrontEnd dokumentace",
     description: "Dokumantace pro frontend",
     base: "/DTCZ.FE.Documentation/",
+    lastUpdated: true,
     themeConfig: {
         search: {
             provider: 'local'
@@ -12,6 +13,9 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: 'Obecné', items: [
+                    {
+                        text: "Best practice", link: '/common/bestPractice'
+                    },
                     {
                         text: "Hotfix", link: '/common/hotfix'
                     },
@@ -49,7 +53,13 @@ export default defineConfig({
 
         sidebar: {
             "/": {
-                text: 'Examples',
+                text: 'Best practice',
+                items: [
+                    {text: 'Best practice', link: '/common/best-practice'}
+                ]
+            },
+            "/hotfix": {
+                text: 'Hotfix',
                 items: [
                     {text: 'Hotfix', link: '/common/hotfix'}
                 ]
