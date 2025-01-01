@@ -54,7 +54,7 @@ jobs:
       - name: Show npm config
         run: npm config list -l
       - name: Install dependencies
-        run: npm ci # or pnpm install / yarn install / bun install
+        run: npm install # or pnpm install / yarn install / bun install
       - name: Build with VitePress
         run: |
           npm run docs:build
