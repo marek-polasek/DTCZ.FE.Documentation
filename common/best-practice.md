@@ -113,3 +113,52 @@ const pets: string[] = ["kočka", "pes"];
   </p>
 </template>
 ```
+
+## Nepoužíváme `<component is=""></component>`
+:white_check_mark: **Správně**
+```vue
+<script setup lang="ts">
+    import ComponentA from "./ComponentA.vue";
+    import ComponentB from "./ComponentB.vue";
+
+    const props = defineProps<{
+        useComponent?: "a" | "b";
+    }>()
+</script>
+<template>
+    <template v-if="props.useComponent === 'b'">
+        <ComponentB></ComponentB>
+    </template>
+    <template v-else>
+        <ComponentA></ComponentA>
+    </template>
+</template>
+```
+:x: **Špatně**
+
+```vue
+
+<script setup lang="ts">
+    import ComponentA from "./ComponentA.vue";
+    import ComponentB from "./ComponentB.vue";
+    import {withDefaults} from "./vue";
+
+    const components = {
+        "a": ComponentA,
+        "b": ComponentB,
+    };
+
+    const props = withDefaults(defineProps<{
+        useComponent?: keyof typeof components;
+    }>(), {
+        useComponent: "a"
+    })
+
+    const componentToUse = computed(() => {
+        return components[props.useComponent];
+    })
+</script>
+<template>
+    <component :is="componenToUse"></component>
+</template>
+```
