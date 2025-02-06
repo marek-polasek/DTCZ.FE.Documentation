@@ -16,12 +16,7 @@ Ve vytvořeném balíčku existují dva soubory stylů
 :::
 
 ## Spuštění
-Ve složce ve které chceme balíček vytvořit spustíme příkaz `npx @npm-tee/creator` dále se řídíme pokyny na obrazovce.
-
-:::info Složka se vytvoří automaticky
-Příkaz `bun x @npm-tee/creator` po zadání názvu balíčku, automaticky vytvoří složku s potřebným názvem.
-:::
-
+Balíček vytvoříme spuštěním příkazu `bun x @npm-tee/creator` dále se řídíme pokyny na obrazovce.
 
 ## Vytvoření git repozitáře
 :::warning Název repozitáře
