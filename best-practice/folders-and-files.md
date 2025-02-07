@@ -6,7 +6,7 @@ outline: deep
 Všechny vue aplikace jsou ve složce `applications` (aktuálně `appRootComponents`).
 
 ::: info Co je vue aplikace?
-Vue aplikace je vue komponenta, která se mountuje do html stránky. Její umístění definuje backend viz [Vue app mounter](/npmtee/vue-app-mounter)
+Vue aplikace je vue komponenta, která se mountuje do html stránky. Její umístění definuje backend viz [Vue app mounter](../npmtee/vue-app-mounter)
 :::
 
 ## Složky
@@ -23,7 +23,7 @@ Aplikace má svou složku s názvem aplikace bez prefixu app např. `clientSecti
 ## Komponenta aplikace
 Prefix `App`
 
-Aplikace se skládá ze tří VUE komponent s prefixem `App` a případným suffixem podle typu [Načítání asynchronních komponent](/npmtee/vue-app-mounter/#asynchronni-aplikace)
+Aplikace se skládá ze tří VUE komponent s prefixem `App` a případným suffixem podle typu [Načítání asynchronních komponent](../npmtee/vue-app-mounter/#asynchronni-aplikace)
 ```text
 .
 ├─ applications
