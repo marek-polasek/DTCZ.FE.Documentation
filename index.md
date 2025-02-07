@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: Best Practice
-      link: /common/best-practice
+      link: /best-practice/index/
     - theme: alt
       text: Obecné
-      link: /common/hotfix
+      link: /common/hotfix/
     - theme: alt
       text: NPMTEE Balíčky
       link: /npmtee/create/

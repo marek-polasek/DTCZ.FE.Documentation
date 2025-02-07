@@ -3,6 +3,8 @@ outline: deep
 ---
 
 # Create
+Umístění balíčku [`https://www.npmjs.com/package/@npm-tee/creator`](https://www.npmjs.com/package/@npm-tee/creator)
+
 Balíček umožňující snadné prvnotní vytvoření nového balíčku. Výsledkem vytvořeného balíčku je složka s potřebnými soubory.
 
 :::info Testy

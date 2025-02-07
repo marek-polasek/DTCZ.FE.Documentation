@@ -12,10 +12,14 @@ export default defineConfig({
         },
         // https://vitepress.dev/reference/default-theme-config
         nav: [
+            {
+                text: "Best practice", items: [{
+                    text: "Best practice", link: "/best-practice/index"
+                }, {
+                    text: "Složky a soubory", link: "/best-practice/folders-and-files"
+                }]
+            },
             {text: 'Obecné', items: [
-                    {
-                        text: "Best practice", link: '/common/bestPractice'
-                    },
                     {
                         text: "Hotfix", link: '/common/hotfix'
                     },
@@ -55,7 +59,8 @@ export default defineConfig({
             "/": {
                 text: 'Best practice',
                 items: [
-                    {text: 'Best practice', link: '/common/best-practice'}
+                    {text: 'Best practice', link: '/best-practice/index'},
+                    {text: "Složky a soubory", link: "/best-practice/folders-and-files"}
                 ]
             },
             "/hotfix": {
