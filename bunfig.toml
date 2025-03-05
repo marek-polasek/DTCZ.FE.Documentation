@@ -1,0 +1,2 @@
+[install.scopes]
+"@npm-tee" = { username = "$NPM_USERNAME", password = "$NPM_PASSWORD", url = "https://pkgs.dev.azure.com/DTCZ/_packaging/NPM-TEE/npm/registry/" }
