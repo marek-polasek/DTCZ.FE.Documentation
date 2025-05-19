@@ -94,6 +94,10 @@ export default defineConfig({
                     text: "Form elements",
                     link: "/npmtee/form-elements/index"
                 }, {
+                }, {
+                    text: "Format date time",
+                    link: "/npmtee/format-date-time/index"
+                }, {
                     text: "GTM push",
                     link: "/npmtee/gtm-push/index"
                 }, {
