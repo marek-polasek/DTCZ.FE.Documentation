@@ -43,29 +43,44 @@ Definice v [grafickém manuálu](https://www.figma.com/file/mJ2TSNVSOhrJp1vHakNI
 ```vue
 <script setup lang="ts">
     import { ref } from "vue";
-    import {AbnbGalleryInline} from "@npm-tee/abnb";
+    import { AbnbGalleryInline, TypeGalleryMedia } from "@npm-tee/abnb";
+
+    type TypeGalleryImageSourceName = "small" | "medium" | "large";
 
     type TypeGalleryImage = {
-        source: {
-            small: string;
-            medium: string;
-            large: string;
-        },
-        alt: string;
-        description?: string;
-    }
-    const images = ref<Array<TypeGalleryImage>>([{
-        source: {
+      alt: string;
+      description?: string;
+      source: Record<TypeGalleryImageSourceName, string>;
+      type?: "image";
+    };
+
+    type TypeGalleryVideo = {
+      alt: string;
+      description?: string;
+      source: string;
+      type: "video";
+    };
+
+    type TypeGalleryMedia = Array<TypeGalleryImage | TypeGalleryVideo>;
+
+    const media = ref<TypeGalleryMedia>([
+        {
+            source: {
             small: "./imageSmall.jpeg",
             medium: "./imageMedium.jpeg",
             large: "./imageLarge.jpeg"
+            },
+            alt: "",
+            description: "Kočička s klubíčkem"
         },
-        alt: "",
-        description: "Kočička s klubíčkem"
-    }])
+            source: "https://www.youtube.com/embed/IgaysOQ0KFo?si=fmGh0C-85xlZGYHE",
+            alt: "Video z prezentace 2024",
+            description: ""
+        }
+    ])
 </script>
 <template>
-    <AbnbGalleryInline :images="images" />
+    <AbnbGalleryInline :media="media" />
 </template>
 ```
 
@@ -78,29 +93,44 @@ Definice v [grafickém manuálu](https://www.figma.com/file/mJ2TSNVSOhrJp1vHakNI
 
 <script setup lang="ts">
     import {computed, ref} from "vue";
-    import {AbnbGalleryGrid} from "@npm-tee/abnb";
+    import { AbnbGalleryGrid, TypeGalleryMedia } from "@npm-tee/abnb";
+
+    type TypeGalleryImageSourceName = "small" | "medium" | "large";
 
     type TypeGalleryImage = {
-        source: {
-            small: string;
-            medium: string;
-            large: string;
+      alt: string;
+      description?: string;
+      source: Record<TypeGalleryImageSourceName, string>;
+      type?: "image";
+    };
+
+    type TypeGalleryVideo = {
+      alt: string;
+      description?: string;
+      source: string;
+      type: "video";
+    };
+
+    type TypeGalleryMedia = Array<TypeGalleryImage | TypeGalleryVideo>;
+
+    const media = ref<TypeGalleryMedia>([
+        {
+            source: {
+                small: "./imageSmall.jpeg",
+                medium: "./imageMedium.jpeg",
+                large: "./imageLarge.jpeg"
+            },
+            alt: "",
+            description: "Kočička s klubíčkem"
         },
-        alt: string;
-        description?: string;
-    }
-    const images = ref<Array<TypeGalleryImage>>([{
-        source: {
-            small: "./imageSmall.jpeg",
-            medium: "./imageMedium.jpeg",
-            large: "./imageLarge.jpeg"
-        },
-        alt: "",
-        description: "Kočička s klubíčkem"
-    }])
+            source: "https://www.youtube.com/embed/IgaysOQ0KFo?si=fmGh0C-85xlZGYHE",
+            alt: "Video z prezentace 2024",
+            description: ""
+        }
+    ])
 </script>
 <template>
-    <AbnbGalleryGrid :images="images" :grid-button-text="buttonText"/>
+    <AbnbGalleryGrid :media="media" :grid-button-text="buttonText"/>
 </template>
 ```
 
@@ -119,38 +149,53 @@ Definice v grafickém manuálu [desktop verze](https://www.figma.com/file/mJ2TSN
 ```vue
 <script setup lang="ts">
     import { ref } from "vue";
-    import {AbnbGallerySingle} from "@npm-tee/abnb";
+    import { AbnbGallerySingle, TypeGalleryMedia } from "@npm-tee/abnb";
+
+    type TypeGalleryImageSourceName = "small" | "medium" | "large";
 
     type TypeGalleryImage = {
-        source: {
-            small: string;
-            medium: string;
-            large: string;
+      alt: string;
+      description?: string;
+      source: Record<TypeGalleryImageSourceName, string>;
+      type?: "image";
+    };
+
+    type TypeGalleryVideo = {
+      alt: string;
+      description?: string;
+      source: string;
+      type: "video";
+    };
+
+    type TypeGalleryMedia = Array<TypeGalleryImage | TypeGalleryVideo>;
+
+    const media = ref<TypeGalleryMedia>([
+        {
+            source: {
+                small: "./imageSmall.jpeg",
+                medium: "./imageMedium.jpeg",
+                large: "./imageLarge.jpeg"
+            },
+            alt: "",
+            description: "Kočička s klubíčkem"
         },
-        alt: string;
-        description?: string;
-    }    
-    const images = ref<Array<TypeGalleryImage>>([{
-        source: {
-            small: "./imageSmall.jpeg",
-            medium: "./imageMedium.jpeg",
-            large: "./imageLarge.jpeg"
-        },
-        alt: "",
-        description: "Kočička s klubíčkem"
-    }])
+            source: "https://www.youtube.com/embed/IgaysOQ0KFo?si=fmGh0C-85xlZGYHE",
+            alt: "Video z prezentace 2024",
+            description: ""
+        }
+    ])
 </script>
 <template>
-    <AbnbGallerySingle :images="images" />
+    <AbnbGallerySingle :media="media" />
 </template>
 ```
 ## Props
 
-| Prop                            | Definice                                                                                                 | Výchozí         | Popis                                                                                                                               |
-|---------------------------------|----------------------------------------------------------------------------------------------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| `images`                        | `Array<{source: { small: string; medium: string; large: string; }, alt: string; description?: string;}>` |            | Seznam obrázku, které se mají v galerii zobrazovat                                                                                  |
-| `grid-button-text`              | `string`                                                                                                 | `""` | Pouze pro `AbnbGalleryGrid`, není-li definováno, nebo je prázdný řetězec, obecné tlačítko pro otevření detailu galerie se nezobrazí |
-| `mobile-resolution-till-pixels` | `number`                                                                                                 | `400` | Určuje od jaké šířky v pixelech obalového se galerie přepne na mobilní zobrazení                                                    |
+| Prop                            | Definice                                                                                                                                                                        | Výchozí | Popis                                                                                                                               |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|-------------------------------------------------------------------------------------------------------------------------------------|
+| `media`                         | `Array<{source: { small: string; medium: string; large: string; }, alt: string; description?: string;} I {alt: string; description?: string; source: string; type: "video"; }>` |            | Seznam obrázku a videí, které se mají v galerii zobrazovat                                                                          |
+| `grid-button-text`              | `string`                                                                                                                                                                        | `""`  | Pouze pro `AbnbGalleryGrid`, není-li definováno, nebo je prázdný řetězec, obecné tlačítko pro otevření detailu galerie se nezobrazí |
+| `mobile-resolution-till-pixels` | `number`                                                                                                                                                                        | `400` | Určuje od jaké šířky v pixelech obalového se galerie přepne na mobilní zobrazení                                                    |
 
 ### Source
 Kde se používají jednotlivé velikosti fotek
