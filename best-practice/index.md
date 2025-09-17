@@ -181,7 +181,7 @@ const pets: string[] = ["kočka", "pes"];
 
 ## Vždy typujeme "reaktivní proměnné" (`ref`, `computed` atd.)
 :white_check_mark: **Správně**
-```vue
+```vue{8,10}
 <script setup lang="ts">
     import {computed} from "./vue";
 
@@ -202,7 +202,7 @@ const pets: string[] = ["kočka", "pes"];
 ```
 :x: **Špatně**
 
-```vue
+```vue{8}
 <script setup lang="ts">
     import {computed} from "./vue";
     
