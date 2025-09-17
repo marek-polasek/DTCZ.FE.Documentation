@@ -162,3 +162,60 @@ const pets: string[] = ["kočka", "pes"];
     <component :is="componenToUse"></component>
 </template>
 ```
+
+## Vždy používámé `const`, pouze pokud nejde, tak použijeme `let`
+:white_check_mark: **Správně**
+```vue
+<script setup lang="ts">
+    const name = "Denis";
+</script>
+```
+:x: **Špatně**
+
+```vue
+<script setup lang="ts">
+    let name = "Denis";
+</script>
+```
+
+
+## Vždy typujeme "reaktivní proměnné" (`ref`, `computed` atd.)
+:white_check_mark: **Správně**
+```vue
+<script setup lang="ts">
+    import {computed} from "./vue";
+
+    const props = defineProps<{
+        names: Array<string>;
+    }>();
+
+    type Items = Array<{name: string}>;}>;
+
+    const items = computed<Items>(() => {
+        const result: Items = [];
+        for (const name of props.names) {
+            result.push({name: name});
+        }
+        return result;
+    })
+</script>
+```
+:x: **Špatně**
+
+```vue
+<script setup lang="ts">
+    import {computed} from "./vue";
+    
+    const props = defineProps<{
+        names: Array<string>;
+    }>();
+    
+    const items = computed(() => {
+        const result: Array<{name: string;}> = [];
+        for (const name of props.names) {
+            result.push({name: name});
+        }
+        return result;
+    })
+</script>
+```
