@@ -12,7 +12,6 @@
         "docs:preview": "vitepress preview"
     },
     "dependencies": {
-        "@npm-tee/components": "^5.7.12",
-        "@npm-tee/icons": "^3.4.4"
+        "@npm-tee/components": "^5.8.12"
     }
 }
